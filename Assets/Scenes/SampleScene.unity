@@ -809,10 +809,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 918205420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73ca3746fe23504aa6eadf91c5720bf, type: 3}
+  m_Script: {fileID: 11500000, guid: ac405bd7f93ffdd4b876715fff63e7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  axes: 1
+  sensitivityHor: 9
+  sensitivityVert: 9
+  minimumVert: -45
+  maximumVert: 45
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
