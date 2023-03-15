@@ -15,7 +15,7 @@ public class WanderingAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IsAlive = false;
+        IsAlive = true;
     }
 
     // Update is called once per frame
