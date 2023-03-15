@@ -58,7 +58,22 @@ public class MouseLook : MonoBehaviour
 
             // Both horizontal and vertical rotations
             case RotationAxes.MouseXY:
-                break;
+                {
+                    // Calculate horizontal rotation
+                    var mouseX = Input.GetAxis("Mouse X");
+                    var horizontalRotDelta = mouseX * sensitivityHor;
+                    var horizontalRot = transform.localEulerAngles.y + horizontalRotDelta;
+
+                    // Calculate vertical rotation
+                    var mouseY = Input.GetAxis("Mouse Y");
+                    verticalRot -= mouseY * sensitivityVert;
+                    verticalRot = Mathf.Clamp(verticalRot, minimumVert, maximumVert);
+
+                    // Apply both rotations
+                    transform.localEulerAngles = new Vector3(verticalRot, horizontalRot, 0);
+
+                    break;
+                }
 
             default:
                 throw new NotSupportedException();
